@@ -1,0 +1,72 @@
+﻿<Window
+    x:Class="XIVRADAR.Windows.TransparentRadarWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:XIVRADAR.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:XIVRADAR.Models"
+    xmlns:properties="clr-namespace:XIVRADAR.Properties"
+    xmlns:viewmodels="clr-namespace:XIVRADAR.ViewModels"
+    Width="{Binding TransparentRadarWidth, Mode=TwoWay, Source={x:Static properties:Settings.Default}}"
+    Height="{Binding TransparentRadarHeight, Mode=TwoWay, Source={x:Static properties:Settings.Default}}"
+    d:DataContext="{d:DesignInstance viewmodels:MainWindowViewModel}"
+    d:DesignHeight="600"
+    d:DesignWidth="600"
+    AllowsTransparency="True"
+    Background="Transparent"
+    Closing="TransparentRadarWindow_OnClosing"
+    FontFamily="{materialDesign:MaterialDesignFont}"
+    Foreground="{DynamicResource MaterialDesignBody}"
+    Left="{Binding TransparentRadarLeft, Mode=TwoWay, Source={x:Static properties:Settings.Default}}"
+    Loaded="TransparentRadarWindow_OnLoaded"
+    Top="{Binding TransparentRadarTop, Mode=TwoWay, Source={x:Static properties:Settings.Default}}"
+    Topmost="True"
+    WindowStartupLocation="Manual"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Border
+                Padding="2"
+                Background="WhiteSmoke"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="2"
+                DockPanel.Dock="Top">
+                <DockPanel LastChildFill="True">
+                    <Button
+                        x:Name="CloseWindow"
+                        Width="15"
+                        Height="15"
+                        Padding="0"
+                        Click="CloseWindow_OnClick"
+                        Content="{materialDesign:PackIcon Kind=Close}"
+                        DockPanel.Dock="Right"
+                        IsEnabled="True"
+                        Style="{DynamicResource MaterialDesignFlatButton}"
+                        ToolTip="Close" />
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        FontSize="10"
+                        FontWeight="Bold"
+                        Foreground="Black"
+                        PreviewMouseDown="UIElement_OnPreviewMouseDown"
+                        Text="RADAR" />
+                </DockPanel>
+            </Border>
+            <Grid DockPanel.Dock="Bottom">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <controls:Radar
+                    x:Name="RadarControl"
+                    Grid.Row="0"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch" />
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

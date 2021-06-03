@@ -1,0 +1,185 @@
+﻿<UserControl
+    x:Class="XIVRADAR.Controls.HomeTabItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:XIVRADAR.Controls"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:properties="clr-namespace:XIVRADAR.Properties"
+    xmlns:viewModels="clr-namespace:XIVRADAR.ViewModels"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.DataGrid.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Button
+                Margin="0,2"
+                Command="{Binding ShowRadarWindowCommand}"
+                Style="{StaticResource MaterialDesignRaisedAccentButton}">
+                <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                    <materialDesign:PackIcon Margin="0,0,5,0" Kind="WindowOpen" />
+                    <TextBlock Text="{Binding Locale[HomeTabItem_ShowRadarText], Source={StaticResource AppViewModel}}" />
+                </StackPanel>
+            </Button>
+            <Button
+                Margin="5,2,0,2"
+                Command="{Binding ShowTransparentRadarWindowCommand}"
+                Style="{StaticResource MaterialDesignRaisedAccentButton}">
+                <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                    <materialDesign:PackIcon Margin="0,0,5,0" Kind="WindowOpenVariant" />
+                    <TextBlock Text="{Binding Locale[HomeTabItem_ShowTransparentRadarText], Source={StaticResource AppViewModel}}" />
+                </StackPanel>
+            </Button>
+            <StackPanel Margin="0,5" Orientation="Horizontal">
+                <ToggleButton
+                    Margin="8"
+                    Cursor="Hand"
+                    IsChecked="{Binding CompassMode, Mode=TwoWay, Source={x:Static properties:Settings.Default}}" />
+                <TextBlock
+                    VerticalAlignment="Center"
+                    Foreground="{DynamicResource MaterialDesignBody}"
+                    Text="{Binding Locale[HomeTabItem_CompassModeText], Source={StaticResource AppViewModel}}" />
+            </StackPanel>
+            <StackPanel Margin="0,5" Orientation="Horizontal">
+                <ToggleButton
+                    Margin="8"
+                    Cursor="Hand"
+                    IsChecked="{Binding FilterItems, Mode=TwoWay, Source={x:Static properties:Settings.Default}}" />
+                <TextBlock
+                    VerticalAlignment="Center"
+                    Foreground="{DynamicResource MaterialDesignBody}"
+                    Text="{Binding Locale[HomeTabItem_EntityFiltersText], Source={StaticResource AppViewModel}}" />
+            </StackPanel>
+            <StackPanel Margin="0,5" Orientation="Horizontal">
+                <ToggleButton
+                    Margin="8"
+                    Cursor="Hand"
+                    IsChecked="{Binding ShowEntityDebugInfo, Mode=TwoWay, Source={x:Static properties:Settings.Default}}" />
+                <TextBlock
+                    VerticalAlignment="Center"
+                    Foreground="{DynamicResource MaterialDesignBody}"
+                    Text="{Binding Locale[HomeTabItem_DebugInfoText], Source={StaticResource AppViewModel}}" />
+            </StackPanel>
+        </StackPanel>
+        <DataGrid
+            x:Name="FilterItemsDataGrid"
+            Grid.Row="1"
+            AutoGenerateColumns="False"
+            CanUserAddRows="false"
+            CanUserDeleteRows="false"
+            CanUserReorderColumns="False"
+            CanUserResizeRows="False"
+            ItemsSource="{Binding FilterItems, Mode=TwoWay, Source={x:Static viewModels:AppViewModel.Instance}}"
+            MaxColumnWidth="120"
+            SelectionMode="Single"
+            SelectionUnit="FullRow">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button
+                                Width="20"
+                                Height="20"
+                                Padding="0"
+                                Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=DataContext.DeleteFilterItemCommand}"
+                                CommandParameter="{Binding}"
+                                ToolTip="{Binding Locale[HomeTabItem_DeleteFilterItemText], Source={StaticResource AppViewModel}}">
+                                <materialDesign:PackIcon Kind="DeleteEmpty" />
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button
+                                Width="20"
+                                Height="20"
+                                Padding="0"
+                                Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=DataContext.EditFilterItemCommand}"
+                                CommandParameter="{Binding}"
+                                ToolTip="{Binding Locale[HomeTabItem_EditFilterItemText], Source={StaticResource AppViewModel}}">
+                                <materialDesign:PackIcon Kind="Settings" />
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridCheckBoxColumn
+                    Binding="{Binding IsEnabled}"
+                    EditingElementStyle="{StaticResource MaterialDesignDataGridCheckBoxColumnEditingStyle}"
+                    ElementStyle="{StaticResource MaterialDesignDataGridCheckBoxColumnStyle}">
+                    <DataGridCheckBoxColumn.Header>
+                        <TextBlock Text="{Binding Locale[FilterItem_FilterEnabledText], Source={StaticResource AppViewModel}}" />
+                    </DataGridCheckBoxColumn.Header>
+                    <DataGridCheckBoxColumn.HeaderStyle>
+                        <Style BasedOn="{StaticResource MaterialDesignDataGridColumnHeader}"
+                               TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        </Style>
+                    </DataGridCheckBoxColumn.HeaderStyle>
+                </DataGridCheckBoxColumn>
+
+                <DataGridTextColumn
+                    Binding="{Binding RegEx, Mode=OneWay}"
+                    ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"
+                    Header="{Binding Locale[FilterItem_RegularExpressionText], Source={StaticResource AppViewModel}}" />
+
+                <DataGridTextColumn
+                    Binding="{Binding FilterType, Mode=OneWay}"
+                    ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"
+                    Header="{Binding Locale[FilterItem_TypeText], Source={StaticResource AppViewModel}}" />
+
+                <DataGridTextColumn
+                    Binding="{Binding MinLevel, Mode=OneWay}"
+                    ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"
+                    Header="{Binding Locale[FilterItem_MinLevelText], Source={StaticResource AppViewModel}}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button
+                Grid.Column="0"
+                Margin="0,2,5,2"
+                Padding="8,0"
+                Command="{Binding AddFilterItemCommand}"
+                Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                ToolTip="{Binding Locale[HomeTabItem_CreateFilterText], Source={StaticResource AppViewModel}}">
+                <materialDesign:PackIcon Kind="AddCircle" />
+            </Button>
+            <Button
+                Grid.Column="1"
+                Margin="0,2"
+                Command="{Binding SaveFilterItemCommand}"
+                Style="{StaticResource MaterialDesignRaisedAccentButton}">
+                <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                    <materialDesign:PackIcon Margin="0,0,5,0" Kind="ZipDisk" />
+                    <TextBlock Text="{Binding Locale[HomeTabItem_SaveChangesText], Source={StaticResource AppViewModel}}" />
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

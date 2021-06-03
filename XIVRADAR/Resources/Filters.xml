@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Filters>
+	<Filter Key="e8a6dca3-a0db-469d-846a-bffc1e8ab2c8">
+		<RegEx>Scout Vulture</RegEx>
+		<IsEnabled>False</IsEnabled>
+	</Filter>
+</Filters>

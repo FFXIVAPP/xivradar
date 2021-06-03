@@ -1,0 +1,56 @@
+﻿<UserControl
+    x:Class="XIVRADAR.Controls.FilterItemEdit"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:XIVRADAR.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:properties="clr-namespace:XIVRADAR.Properties"
+    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+    xmlns:wpf="http://materialdesigninxaml.net/winfx/xaml/themes"
+    Width="320"
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    mc:Ignorable="d">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <CheckBox
+                Content="{Binding Locale[FilterItem_FilterEnabledText], Source={StaticResource AppViewModel}}"
+                Foreground="{DynamicResource MaterialDesignBody}"
+                IsChecked="{Binding IsEnabled}"
+                Style="{StaticResource MaterialDesignCheckBox}" />
+            <TextBox
+                wpf:HintAssist.HelperText="{Binding Locale[FilterItem_RegularExpressionText], Source={StaticResource AppViewModel}}"
+                Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                Text="{Binding RegEx}" />
+            <ComboBox
+                Margin="0,20,0,10"
+                wpf:HintAssist.HelperText="{Binding Locale[FilterItem_TypeText], Source={StaticResource AppViewModel}}"
+                ItemsSource="{Binding RadarFilterTypes, Source={x:Static properties:Settings.Default}}"
+                SelectedValue="{Binding Type}" />
+            <TextBox
+                wpf:HintAssist.HelperText="{Binding Locale[FilterItem_MinLevelText], Source={StaticResource AppViewModel}}"
+                Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                Text="{Binding MinLevel}" />
+        </StackPanel>
+        <StackPanel
+            Grid.Row="1"
+            Margin="0,16,0,0"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                Command="{x:Static wpf:DialogHost.CloseDialogCommand}"
+                IsDefault="True"
+                Style="{DynamicResource MaterialDesignFlatButton}">
+                <Button.CommandParameter>
+                    <system:Boolean>True</system:Boolean>
+                </Button.CommandParameter>
+                OK
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

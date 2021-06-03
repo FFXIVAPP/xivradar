@@ -1,0 +1,276 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net5.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<ApplicationIcon>logo.ico</ApplicationIcon>
+		<Version>1.0.0</Version>
+		<FileVersion>1.0.0.0</FileVersion>
+		<Company>SyndicatedLife</Company>
+		<Copyright>Copyright © 2007 - 2021 Ryan Wilson</Copyright>
+		<Version>1.0.0</Version>
+		<FileVersion>1.0.0.0</FileVersion>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Resources\ChatHistory.xml" />
+		<None Remove="Resources\ChatTabs.xml" />
+		<None Remove="Resources\Filters.xml" />
+		<None Remove="Resources\Icons\acn.png" />
+		<None Remove="Resources\Icons\aetheryte.png" />
+		<None Remove="Resources\Icons\alc.png" />
+		<None Remove="Resources\Icons\arc.png" />
+		<None Remove="Resources\Icons\arm.png" />
+		<None Remove="Resources\Icons\ast.png" />
+		<None Remove="Resources\Icons\avatar.png" />
+		<None Remove="Resources\Icons\blm.png" />
+		<None Remove="Resources\Icons\blu.png" />
+		<None Remove="Resources\Icons\brd.png" />
+		<None Remove="Resources\Icons\bsm.png" />
+		<None Remove="Resources\Icons\btn.png" />
+		<None Remove="Resources\Icons\chocobo.png" />
+		<None Remove="Resources\Icons\cnj.png" />
+		<None Remove="Resources\Icons\cpt.png" />
+		<None Remove="Resources\Icons\cul.png" />
+		<None Remove="Resources\Icons\dnc.png" />
+		<None Remove="Resources\Icons\down.png" />
+		<None Remove="Resources\Icons\drg.png" />
+		<None Remove="Resources\Icons\drk.png" />
+		<None Remove="Resources\Icons\fate_defense.png" />
+		<None Remove="Resources\Icons\fate_escort.png" />
+		<None Remove="Resources\Icons\fate_gather.png" />
+		<None Remove="Resources\Icons\fate_nm.png" />
+		<None Remove="Resources\Icons\fate_slay.png" />
+		<None Remove="Resources\Icons\fishing.png" />
+		<None Remove="Resources\Icons\fsh.png" />
+		<None Remove="Resources\Icons\gathering.png" />
+		<None Remove="Resources\Icons\gld.png" />
+		<None Remove="Resources\Icons\gnb.png" />
+		<None Remove="Resources\Icons\gsm.png" />
+		<None Remove="Resources\Icons\harvesting.png" />
+		<None Remove="Resources\Icons\harvesting_super.png" />
+		<None Remove="Resources\Icons\lnc.png" />
+		<None Remove="Resources\Icons\logging.png" />
+		<None Remove="Resources\Icons\logging_super.png" />
+		<None Remove="Resources\Icons\ltw.png" />
+		<None Remove="Resources\Icons\mch.png" />
+		<None Remove="Resources\Icons\min.png" />
+		<None Remove="Resources\Icons\mining.png" />
+		<None Remove="Resources\Icons\mining_super.png" />
+		<None Remove="Resources\Icons\mnk.png" />
+		<None Remove="Resources\Icons\mob_aggressive_1.png" />
+		<None Remove="Resources\Icons\mob_aggressive_2.png" />
+		<None Remove="Resources\Icons\mob_aggressive_3.png" />
+		<None Remove="Resources\Icons\mob_aggressive_4.png" />
+		<None Remove="Resources\Icons\mob_aggressive_5.png" />
+		<None Remove="Resources\Icons\mob_aggressive_6.png" />
+		<None Remove="Resources\Icons\mob_claimed.png" />
+		<None Remove="Resources\Icons\mob_fate.png" />
+		<None Remove="Resources\Icons\mob_passive_1.png" />
+		<None Remove="Resources\Icons\mob_passive_2.png" />
+		<None Remove="Resources\Icons\mob_passive_3.png" />
+		<None Remove="Resources\Icons\mob_passive_4.png" />
+		<None Remove="Resources\Icons\mob_passive_5.png" />
+		<None Remove="Resources\Icons\mob_passive_6.png" />
+		<None Remove="Resources\Icons\mob_unclaimed.png" />
+		<None Remove="Resources\Icons\mrd.png" />
+		<None Remove="Resources\Icons\nin.png" />
+		<None Remove="Resources\Icons\player.png" />
+		<None Remove="Resources\Icons\pld.png" />
+		<None Remove="Resources\Icons\pug.png" />
+		<None Remove="Resources\Icons\quarrying.png" />
+		<None Remove="Resources\Icons\quarrying_super.png" />
+		<None Remove="Resources\Icons\radar_heading.png" />
+		<None Remove="Resources\Icons\rdm.png" />
+		<None Remove="Resources\Icons\rog.png" />
+		<None Remove="Resources\Icons\sam.png" />
+		<None Remove="Resources\Icons\sch.png" />
+		<None Remove="Resources\Icons\smn.png" />
+		<None Remove="Resources\Icons\spearfishing.png" />
+		<None Remove="Resources\Icons\spearfishing_super.png" />
+		<None Remove="Resources\Icons\thm.png" />
+		<None Remove="Resources\Icons\unknown.png" />
+		<None Remove="Resources\Icons\up.png" />
+		<None Remove="Resources\Icons\vendor.png" />
+		<None Remove="Resources\Icons\war.png" />
+		<None Remove="Resources\Icons\whm.png" />
+		<None Remove="Resources\Icons\wvr.png" />
+		<None Remove="Resources\XIVRADAR.exe.nlog" />
+		<None Remove="Resources\blackcat.svg" />
+		<None Remove="Resources\ChatCodes.xml" />
+		<None Remove="Resources\Contact.png" />
+		<None Remove="Resources\DE.png" />
+		<None Remove="Resources\EN.png" />
+		<None Remove="Resources\FR.png" />
+		<None Remove="Resources\JA.png" />
+		<None Remove="Resources\KO.png" />
+		<None Remove="Resources\logo.ico" />
+		<None Remove="Resources\logo.png" />
+		<None Remove="Resources\logo.svg" />
+		<None Remove="Resources\ZH.png" />
+		<None Remove="XIVRADAR.exe.nlog" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="XIVRADAR.exe.nlog">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MaterialDesignExtensions" Version="3.3.0" />
+		<PackageReference Include="MaterialDesignThemes" Version="4.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\sharlayan\Sharlayan\Sharlayan.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Resources\ChatHistory.xml" />
+		<Resource Include="Resources\Filters.xml" />
+		<Resource Include="Resources\Icons\acn.png" />
+		<Resource Include="Resources\Icons\aetheryte.png" />
+		<Resource Include="Resources\Icons\alc.png" />
+		<Resource Include="Resources\Icons\arc.png" />
+		<Resource Include="Resources\Icons\arm.png" />
+		<Resource Include="Resources\Icons\ast.png" />
+		<Resource Include="Resources\Icons\avatar.png" />
+		<Resource Include="Resources\Icons\blm.png" />
+		<Resource Include="Resources\Icons\blu.png" />
+		<Resource Include="Resources\Icons\brd.png" />
+		<Resource Include="Resources\Icons\bsm.png" />
+		<Resource Include="Resources\Icons\btn.png" />
+		<Resource Include="Resources\Icons\chocobo.png" />
+		<Resource Include="Resources\Icons\cnj.png" />
+		<Resource Include="Resources\Icons\cpt.png" />
+		<Resource Include="Resources\Icons\cul.png" />
+		<Resource Include="Resources\Icons\dnc.png" />
+		<Resource Include="Resources\Icons\down.png" />
+		<Resource Include="Resources\Icons\drg.png" />
+		<Resource Include="Resources\Icons\drk.png" />
+		<Resource Include="Resources\Icons\fate_defense.png" />
+		<Resource Include="Resources\Icons\fate_escort.png" />
+		<Resource Include="Resources\Icons\fate_gather.png" />
+		<Resource Include="Resources\Icons\fate_nm.png" />
+		<Resource Include="Resources\Icons\fate_slay.png" />
+		<Resource Include="Resources\Icons\fishing.png" />
+		<Resource Include="Resources\Icons\fsh.png" />
+		<Resource Include="Resources\Icons\gathering.png" />
+		<Resource Include="Resources\Icons\gld.png" />
+		<Resource Include="Resources\Icons\gnb.png" />
+		<Resource Include="Resources\Icons\gsm.png" />
+		<Resource Include="Resources\Icons\harvesting.png" />
+		<Resource Include="Resources\Icons\harvesting_super.png" />
+		<Resource Include="Resources\Icons\lnc.png" />
+		<Resource Include="Resources\Icons\logging.png" />
+		<Resource Include="Resources\Icons\logging_super.png" />
+		<Resource Include="Resources\Icons\ltw.png" />
+		<Resource Include="Resources\Icons\mch.png" />
+		<Resource Include="Resources\Icons\min.png" />
+		<Resource Include="Resources\Icons\mining.png" />
+		<Resource Include="Resources\Icons\mining_super.png" />
+		<Resource Include="Resources\Icons\mnk.png" />
+		<Resource Include="Resources\Icons\mob_aggressive_1.png" />
+		<Resource Include="Resources\Icons\mob_aggressive_2.png" />
+		<Resource Include="Resources\Icons\mob_aggressive_3.png" />
+		<Resource Include="Resources\Icons\mob_aggressive_4.png" />
+		<Resource Include="Resources\Icons\mob_aggressive_5.png" />
+		<Resource Include="Resources\Icons\mob_aggressive_6.png" />
+		<Resource Include="Resources\Icons\mob_claimed.png" />
+		<Resource Include="Resources\Icons\mob_fate.png" />
+		<Resource Include="Resources\Icons\mob_passive_1.png" />
+		<Resource Include="Resources\Icons\mob_passive_2.png" />
+		<Resource Include="Resources\Icons\mob_passive_3.png" />
+		<Resource Include="Resources\Icons\mob_passive_4.png" />
+		<Resource Include="Resources\Icons\mob_passive_5.png" />
+		<Resource Include="Resources\Icons\mob_passive_6.png" />
+		<Resource Include="Resources\Icons\mob_unclaimed.png" />
+		<Resource Include="Resources\Icons\mrd.png" />
+		<Resource Include="Resources\Icons\nin.png" />
+		<Resource Include="Resources\Icons\player.png" />
+		<Resource Include="Resources\Icons\pld.png" />
+		<Resource Include="Resources\Icons\pug.png" />
+		<Resource Include="Resources\Icons\quarrying.png" />
+		<Resource Include="Resources\Icons\quarrying_super.png" />
+		<Resource Include="Resources\Icons\radar_heading.png" />
+		<Resource Include="Resources\Icons\rdm.png" />
+		<Resource Include="Resources\Icons\rog.png" />
+		<Resource Include="Resources\Icons\sam.png" />
+		<Resource Include="Resources\Icons\sch.png" />
+		<Resource Include="Resources\Icons\smn.png" />
+		<Resource Include="Resources\Icons\spearfishing.png" />
+		<Resource Include="Resources\Icons\spearfishing_super.png" />
+		<Resource Include="Resources\Icons\thm.png" />
+		<Resource Include="Resources\Icons\unknown.png" />
+		<Resource Include="Resources\Icons\up.png" />
+		<Resource Include="Resources\Icons\vendor.png" />
+		<Resource Include="Resources\Icons\war.png" />
+		<Resource Include="Resources\Icons\whm.png" />
+		<Resource Include="Resources\Icons\wvr.png" />
+		<Resource Include="Resources\XIVRADAR.exe.nlog" />
+		<Resource Include="Resources\Contact.png" />
+		<Resource Include="Resources\logo.ico" />
+		<Resource Include="Resources\logo.png" />
+		<Resource Include="Resources\EN.png" />
+		<Resource Include="Resources\ChatCodes.xml" />
+		<Resource Include="Resources\ZH.png" />
+		<Resource Include="Resources\DE.png" />
+		<Resource Include="Resources\FR.png" />
+		<Resource Include="Resources\JA.png" />
+		<Resource Include="Resources\KO.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Settings.Designer.cs">
+			<DesignTimeSharedInput>True</DesignTimeSharedInput>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Settings.settings</DependentUpon>
+		</Compile>
+		<Compile Update="Settings.Designer.cs">
+			<DesignTimeSharedInput>True</DesignTimeSharedInput>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Settings.settings</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.de.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Resources.fr.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Resources.ja.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Resources.ko.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Resources.zh.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Properties\Settings.settings">
+			<Generator>SettingsSingleFileGenerator</Generator>
+			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
+		<None Update="Settings.settings">
+			<Generator>SettingsSingleFileGenerator</Generator>
+			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
+	</ItemGroup>
+</Project>

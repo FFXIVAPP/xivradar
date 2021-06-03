@@ -1,0 +1,263 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="XIVRADAR.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Width" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1050</Value>
+    </Setting>
+    <Setting Name="Height" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">660</Value>
+    </Setting>
+    <Setting Name="GameLanguages" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;English&lt;/string&gt;
+  &lt;string&gt;Japanese&lt;/string&gt;
+  &lt;string&gt;French&lt;/string&gt;
+  &lt;string&gt;German&lt;/string&gt;
+  &lt;string&gt;Chinese&lt;/string&gt;
+  &lt;string&gt;Korean&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="UseLocalJSONCache" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="InterfaceLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">English</Value>
+    </Setting>
+    <Setting Name="DarkMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UserThemePrimary" Type="System.String" Scope="User">
+      <Value Profile="(Default)">grey</Value>
+    </Setting>
+    <Setting Name="UserThemeAccent" Type="System.String" Scope="User">
+      <Value Profile="(Default)">blue</Value>
+    </Setting>
+    <Setting Name="ActionWorkerTiming" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="ActorWorkerTiming" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">250</Value>
+    </Setting>
+    <Setting Name="ChatLogWorkerTiming" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">250</Value>
+    </Setting>
+    <Setting Name="CurrentPlayerWorkerTiming" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="InventoryWorkerTiming" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="JobResourceWorkerTiming" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">250</Value>
+    </Setting>
+    <Setting Name="PartyWorkerTiming" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="TargetWorkerTiming" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="Culture" Type="System.Globalization.CultureInfo" Scope="User">
+      <Value Profile="(Default)">(Default)</Value>
+    </Setting>
+    <Setting Name="CultureSet" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Left" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Top" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="UpgradeSettings" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FlowDocumentZoom" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="ShowWidgetTitleBar" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="EnableWidgetClickThrough" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CompassMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FilterItems" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShowEntityDebugInfo" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PCShow" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PCShowName" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PCShowHPP" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PCShowJob" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PCShowDistance" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PCFontSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="PCFontColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="NPCShow" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="NPCShowName" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="NPCShowHPP" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="NPCShowDistance" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="NPCFontSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="NPCFontColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LimeGreen</Value>
+    </Setting>
+    <Setting Name="MonsterShow" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MonsterShowName" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MonsterShowHPP" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MonsterShowDistance" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MonsterFontSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="MonsterFontColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="MonsterARankFontColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SkyBlue</Value>
+    </Setting>
+    <Setting Name="MonsterBRankFontColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gainsboro</Value>
+    </Setting>
+    <Setting Name="MonsterSRankFontColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Yellow</Value>
+    </Setting>
+    <Setting Name="GatheringShow" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="GatheringShowName" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="GatheringShowDistance" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="GatheringFontSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="GatheringFontColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Orange</Value>
+    </Setting>
+    <Setting Name="OtherShow" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="OtherShowName" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="OtherShowHPP" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="OtherShowDistance" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="OtherFontSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="OtherFontColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Tan</Value>
+    </Setting>
+    <Setting Name="MonsterARankShowHPP" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MonsterARankShowDistance" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MonsterARankFontSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="MonsterBRankShowHPP" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MonsterBRankShowDistance" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MonsterBRankFontSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">16</Value>
+    </Setting>
+    <Setting Name="MonsterSRankShowHPP" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MonsterSRankShowDistance" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MonsterSRankFontSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">24</Value>
+    </Setting>
+    <Setting Name="RadarFilterTypes" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Unknown&lt;/string&gt;
+  &lt;string&gt;PC&lt;/string&gt;
+  &lt;string&gt;NPC&lt;/string&gt;
+  &lt;string&gt;Monster&lt;/string&gt;
+  &lt;string&gt;Gathering&lt;/string&gt;
+  &lt;string&gt;Aetheryte&lt;/string&gt;
+  &lt;string&gt;Minion&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="RadarTop" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="RadarLeft" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="RadarHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">600</Value>
+    </Setting>
+    <Setting Name="RadarWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">600</Value>
+    </Setting>
+    <Setting Name="ShowRadarOnOpen" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowTransparentRadarOnOpen" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TransparentRadarTop" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="TransparentRadarLeft" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="TransparentRadarHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">600</Value>
+    </Setting>
+    <Setting Name="TransparentRadarWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">600</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
