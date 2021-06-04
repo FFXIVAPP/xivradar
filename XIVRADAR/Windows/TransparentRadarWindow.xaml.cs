@@ -79,7 +79,11 @@ namespace XIVRADAR.Windows {
         }
 
         private void EventHost_OnNewCurrentUser(object sender, MemoryHandler memoryhandler, ActorItem eventdata) {
-            if (memoryhandler.Configuration.ProcessModel.ProcessID == this._processID) {
+            if (memoryhandler.Configuration.ProcessModel.ProcessID != this._processID) {
+                return;
+            }
+
+            if (eventdata is not null) {
                 this.WindowTitle = eventdata.Name;
             }
         }
