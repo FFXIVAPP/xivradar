@@ -46,7 +46,8 @@
                 Style="{StaticResource MaterialDesignRaisedAccentButton}">
                 <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
                     <materialDesign:PackIcon Margin="0,0,5,0" Kind="WindowOpenVariant" />
-                    <TextBlock Text="{Binding Locale[HomeTabItem_ShowTransparentRadarText], Source={StaticResource AppViewModel}}" />
+                    <TextBlock
+                        Text="{Binding Locale[HomeTabItem_ShowTransparentRadarText], Source={StaticResource AppViewModel}}" />
                 </StackPanel>
             </Button>
             <StackPanel Margin="0,5" Orientation="Horizontal">
@@ -130,7 +131,8 @@
                     EditingElementStyle="{StaticResource MaterialDesignDataGridCheckBoxColumnEditingStyle}"
                     ElementStyle="{StaticResource MaterialDesignDataGridCheckBoxColumnStyle}">
                     <DataGridCheckBoxColumn.Header>
-                        <TextBlock Text="{Binding Locale[FilterItem_FilterEnabledText], Source={StaticResource AppViewModel}}" />
+                        <TextBlock
+                            Text="{Binding Locale[FilterItem_FilterEnabledText], Source={StaticResource AppViewModel}}" />
                     </DataGridCheckBoxColumn.Header>
                     <DataGridCheckBoxColumn.HeaderStyle>
                         <Style BasedOn="{StaticResource MaterialDesignDataGridColumnHeader}"
@@ -177,7 +179,8 @@
                 Style="{StaticResource MaterialDesignRaisedAccentButton}">
                 <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
                     <materialDesign:PackIcon Margin="0,0,5,0" Kind="ZipDisk" />
-                    <TextBlock Text="{Binding Locale[HomeTabItem_SaveChangesText], Source={StaticResource AppViewModel}}" />
+                    <TextBlock
+                        Text="{Binding Locale[HomeTabItem_SaveChangesText], Source={StaticResource AppViewModel}}" />
                 </StackPanel>
             </Button>
         </Grid>

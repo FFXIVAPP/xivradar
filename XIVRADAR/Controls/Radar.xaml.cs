@@ -48,12 +48,12 @@ namespace XIVRADAR.Controls {
 
         private bool _isRendered;
 
+        private int _processID;
+
         private Typeface _typeface = new Typeface("Verdana");
 
         public Radar() {
             this.InitializeComponent();
-
-            Instance = this;
 
             if (this._isRendered) {
                 return;
@@ -85,8 +85,6 @@ namespace XIVRADAR.Controls {
 
         private ConcurrentDictionary<uint, ActorItem> CurrentNPCs { get; set; } = new ConcurrentDictionary<uint, ActorItem>();
 
-        public static Radar Instance { get; set; }
-
         public ConcurrentDictionary<uint, ActorItem> CurrentPCs { get; set; } = new ConcurrentDictionary<uint, ActorItem>();
 
         public ConcurrentDictionary<uint, ActorItem> CurrentMonsters { get; set; } = new ConcurrentDictionary<uint, ActorItem>();
@@ -101,22 +99,31 @@ namespace XIVRADAR.Controls {
         }
 
         private void Radar_OnNewNPCActorItems(object sender, MemoryHandler memoryhandler, ConcurrentDictionary<uint, ActorItem> eventdata) {
-            this.CurrentNPCs = eventdata;
+            if (memoryhandler.Configuration.ProcessModel.ProcessID == this._processID) {
+                this.CurrentNPCs = eventdata;
+            }
         }
 
         private void Radar_OnNewMonsterActorItems(object sender, MemoryHandler memoryhandler, ConcurrentDictionary<uint, ActorItem> eventdata) {
-            this.CurrentMonsters = eventdata;
+            if (memoryhandler.Configuration.ProcessModel.ProcessID == this._processID) {
+                this.CurrentMonsters = eventdata;
+            }
         }
 
         private void Radar_OnNewPCActorItems(object sender, MemoryHandler memoryhandler, ConcurrentDictionary<uint, ActorItem> eventdata) {
-            this.CurrentPCs = eventdata;
+            if (memoryhandler.Configuration.ProcessModel.ProcessID == this._processID) {
+                this.CurrentPCs = eventdata;
+            }
         }
 
         private void Radar_OnNewCurrentUser(object sender, MemoryHandler memoryhandler, ActorItem eventdata) {
-            this.CurrentUser = eventdata;
+            if (memoryhandler.Configuration.ProcessModel.ProcessID == this._processID) {
+                this.CurrentUser = eventdata;
+            }
         }
 
-        public void Refresh() {
+        public void Refresh(int processID) {
+            this._processID = processID;
             this.InvalidateVisual();
         }
 
@@ -178,7 +185,7 @@ namespace XIVRADAR.Controls {
                     pcEntites = FilterItemHelper.ResolveFilteredEntities(this.PCFilters, pcEntites);
                 }
 
-                monsterEntites = FilterItemHelper.CleanupEntities(monsterEntites);
+                monsterEntites = FilterItemHelper.CleanupEntities(monsterEntites, this.CurrentUser.MapIndex);
             }
 
             #region Resolve PCs

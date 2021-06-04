@@ -14,7 +14,8 @@
 
     <Grid>
         <TabControl Style="{StaticResource MaterialDesignTabControl}">
-            <TabItem Cursor="Hand" Header="{Binding Locale[SettingsTabItem_RadarText], Source={StaticResource AppViewModel}}">
+            <TabItem Cursor="Hand"
+                     Header="{Binding Locale[SettingsTabItem_RadarText], Source={StaticResource AppViewModel}}">
                 <controls:RadarSettings />
             </TabItem>
             <TabItem Cursor="Hand"

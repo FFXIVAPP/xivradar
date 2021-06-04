@@ -10,19 +10,17 @@
 
 namespace XIVRADAR.Helpers {
     using System.Collections.Generic;
-    using System.Linq;
 
     using Sharlayan.Core;
     using Sharlayan.Core.Enums;
 
-    using XIVRADAR.Controls;
     using XIVRADAR.Models;
 
     public static class FilterItemHelper {
-        public static List<ActorItem> CleanupEntities(IEnumerable<ActorItem> entities) {
+        public static List<ActorItem> CleanupEntities(IEnumerable<ActorItem> entities, uint mapIndex) {
             List<ActorItem> filtered = new List<ActorItem>();
             foreach (ActorItem actorEntity in entities) {
-                bool correctMap = Radar.Instance.CurrentPCs.FirstOrDefault().Value.MapIndex == actorEntity.MapIndex;
+                bool correctMap = mapIndex == actorEntity.MapIndex;
                 bool isDead = actorEntity.ActionStatus != Actor.ActionStatus.Dead;
 
                 if (isDead && correctMap) {

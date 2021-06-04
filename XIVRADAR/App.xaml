@@ -18,7 +18,8 @@
                     ColorAdjustment="{materialDesign:ColorAdjustment}"
                     PrimaryColor="Red"
                     SecondaryColor="Orange" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <!-- <ResourceDictionary Source="pack://application:,,,/MaterialDesignExtensions;component/Themes/Generic.xaml" /> -->
 
             </ResourceDictionary.MergedDictionaries>
@@ -27,8 +28,10 @@
                 x:Key="MaterialDesignTabControl"
                 TargetType="{x:Type TabControl}">
                 <Setter Property="controls:TabControlAssist.TabHeaderHorizontalAlignment" Value="Left" />
-                <Setter Property="controls:TabControlAssist.TabHeaderHighlightBrush" Value="{DynamicResource PrimaryHueMidBrush}" />
-                <Setter Property="controls:TabControlAssist.TabHeaderInactiveBrush" Value="{DynamicResource MaterialDesignBodyLight}" />
+                <Setter Property="controls:TabControlAssist.TabHeaderHighlightBrush"
+                        Value="{DynamicResource PrimaryHueMidBrush}" />
+                <Setter Property="controls:TabControlAssist.TabHeaderInactiveBrush"
+                        Value="{DynamicResource MaterialDesignBodyLight}" />
                 <Setter Property="controls:TabControlAssist.TabHeaderInactiveOpacity" Value="1" />
                 <Setter Property="Background" Value="Transparent" />
                 <Setter Property="Template">
@@ -146,7 +149,8 @@
                                                                     <DataTrigger
                                                                         Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource TemplatedParent}}"
                                                                         Value="False">
-                                                                        <Setter Property="Opacity" Value="{Binding Path=(controls:TabControlAssist.TabHeaderInactiveOpacity), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type TabControl}}}" />
+                                                                        <Setter Property="Opacity"
+                                                                            Value="{Binding Path=(controls:TabControlAssist.TabHeaderInactiveOpacity), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type TabControl}}}" />
                                                                     </DataTrigger>
                                                                     <DataTrigger
                                                                         Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource TemplatedParent}}"
@@ -177,7 +181,9 @@
                                                 </Grid>
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsSelected" Value="True">
-                                                        <Setter Property="controls:TabControlAssist.TabHeaderForeground" Value="{Binding Path=(controls:TabControlAssist.TabHeaderHighlightBrush), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type TabControl}}}" />
+                                                        <Setter
+                                                            Property="controls:TabControlAssist.TabHeaderForeground"
+                                                            Value="{Binding Path=(controls:TabControlAssist.TabHeaderHighlightBrush), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type TabControl}}}" />
                                                         <Trigger.EnterActions>
                                                             <BeginStoryboard Storyboard="{StaticResource OnSelected}" />
                                                         </Trigger.EnterActions>
@@ -186,7 +192,9 @@
                                                         </Trigger.ExitActions>
                                                     </Trigger>
                                                     <Trigger Property="IsSelected" Value="False">
-                                                        <Setter Property="controls:TabControlAssist.TabHeaderForeground" Value="{Binding Path=(controls:TabControlAssist.TabHeaderInactiveBrush), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type TabControl}}}" />
+                                                        <Setter
+                                                            Property="controls:TabControlAssist.TabHeaderForeground"
+                                                            Value="{Binding Path=(controls:TabControlAssist.TabHeaderInactiveBrush), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type TabControl}}}" />
                                                     </Trigger>
                                                     <Trigger Property="IsEnabled" Value="False">
                                                         <Setter Property="Opacity" Value="0.23" />
@@ -280,13 +288,15 @@
                                     <Setter TargetName="HeaderPanelBorder" Property="Margin" Value="2,0,2,2" />
                                     <Setter TargetName="HeaderPanel" Property="Columns" Value="0" />
                                     <Setter TargetName="HeaderPanel" Property="Rows" Value="1" />
-                                    <Setter TargetName="HeaderSeparatorBorder" Property="BorderThickness" Value="0,0,0,1" />
+                                    <Setter TargetName="HeaderSeparatorBorder" Property="BorderThickness"
+                                            Value="0,0,0,1" />
                                 </Trigger>
                                 <Trigger Property="TabStripPlacement" Value="Left">
                                     <Setter TargetName="HeaderPanelBorder" Property="Grid.Row" Value="0" />
                                     <Setter TargetName="PART_SelectedContentHostBorder" Property="Grid.Row" Value="0" />
                                     <Setter TargetName="HeaderPanelBorder" Property="Grid.Column" Value="0" />
-                                    <Setter TargetName="PART_SelectedContentHostBorder" Property="Grid.Column" Value="1" />
+                                    <Setter TargetName="PART_SelectedContentHostBorder" Property="Grid.Column"
+                                            Value="1" />
                                     <Setter TargetName="ColumnDefinition0" Property="Width" Value="Auto" />
                                     <Setter TargetName="ColumnDefinition1" Property="Width" Value="*" />
                                     <Setter TargetName="RowDefinition0" Property="Height" Value="*" />
@@ -294,13 +304,15 @@
                                     <Setter TargetName="HeaderPanelBorder" Property="Margin" Value="2,2,0,2" />
                                     <Setter TargetName="HeaderPanel" Property="Columns" Value="1" />
                                     <Setter TargetName="HeaderPanel" Property="Rows" Value="0" />
-                                    <Setter TargetName="HeaderSeparatorBorder" Property="BorderThickness" Value="0,0,1,0" />
+                                    <Setter TargetName="HeaderSeparatorBorder" Property="BorderThickness"
+                                            Value="0,0,1,0" />
                                 </Trigger>
                                 <Trigger Property="TabStripPlacement" Value="Right">
                                     <Setter TargetName="HeaderPanelBorder" Property="Grid.Row" Value="0" />
                                     <Setter TargetName="PART_SelectedContentHostBorder" Property="Grid.Row" Value="0" />
                                     <Setter TargetName="HeaderPanelBorder" Property="Grid.Column" Value="1" />
-                                    <Setter TargetName="PART_SelectedContentHostBorder" Property="Grid.Column" Value="0" />
+                                    <Setter TargetName="PART_SelectedContentHostBorder" Property="Grid.Column"
+                                            Value="0" />
                                     <Setter TargetName="ColumnDefinition0" Property="Width" Value="*" />
                                     <Setter TargetName="ColumnDefinition1" Property="Width" Value="Auto" />
                                     <Setter TargetName="RowDefinition0" Property="Height" Value="*" />
@@ -308,7 +320,8 @@
                                     <Setter TargetName="HeaderPanelBorder" Property="Margin" Value="0,2,2,2" />
                                     <Setter TargetName="HeaderPanel" Property="Columns" Value="1" />
                                     <Setter TargetName="HeaderPanel" Property="Rows" Value="0" />
-                                    <Setter TargetName="HeaderSeparatorBorder" Property="BorderThickness" Value="0,0,1,0" />
+                                    <Setter TargetName="HeaderSeparatorBorder" Property="BorderThickness"
+                                            Value="0,0,1,0" />
                                 </Trigger>
                             </ControlTemplate.Triggers>
 

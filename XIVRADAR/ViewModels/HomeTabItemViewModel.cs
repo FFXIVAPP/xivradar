@@ -10,6 +10,7 @@
 
 namespace XIVRADAR.ViewModels {
     using System;
+    using System.Diagnostics;
     using System.Threading.Tasks;
 
     using MaterialDesignThemes.Wpf;
@@ -54,12 +55,16 @@ namespace XIVRADAR.ViewModels {
 
             this.ShowRadarWindowCommand = new DelegatedCommand(
                 _ => {
-                    WindowManager.Instance.ShowRadarWindow();
+                    foreach ((int processID, Process _) in AppViewModel.Instance.GameInstances) {
+                        WindowManager.Instance.ShowRadarWindow(processID);
+                    }
                 });
 
             this.ShowTransparentRadarWindowCommand = new DelegatedCommand(
                 _ => {
-                    WindowManager.Instance.ShowTransparentRadarWindow();
+                    foreach ((int processID, Process _) in AppViewModel.Instance.GameInstances) {
+                        WindowManager.Instance.ShowTransparentRadarWindow(processID);
+                    }
                 });
         }
 

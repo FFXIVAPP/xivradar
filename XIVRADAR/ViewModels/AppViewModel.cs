@@ -13,16 +13,15 @@ namespace XIVRADAR.ViewModels {
     using System.Collections.Concurrent;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using System.Diagnostics;
     using System.Globalization;
     using System.IO;
-    using System.Linq;
     using System.Xml.Linq;
 
     using NLog;
 
     using Sharlayan.Core;
 
-    using XIVRADAR.Enums;
     using XIVRADAR.Helpers;
     using XIVRADAR.Models;
 
@@ -108,7 +107,7 @@ namespace XIVRADAR.ViewModels {
                     CultureInfo = new CultureInfo("ko"),
                 });
         }
-        
+
         public ObservableCollection<FilterItem> FilterItems {
             get => this._filterItems ??= new ObservableCollection<FilterItem>();
             set => this.SetProperty(ref this._filterItems, value);
@@ -256,5 +255,7 @@ namespace XIVRADAR.ViewModels {
         }
 
         public List<FilterItem> RankedMonsters { get; set; } = new List<FilterItem>();
+
+        public ConcurrentDictionary<int, Process> GameInstances { get; set; } = new ConcurrentDictionary<int, Process>();
     }
 }

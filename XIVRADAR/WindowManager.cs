@@ -10,6 +10,7 @@
 
 namespace XIVRADAR {
     using System;
+    using System.Collections.Concurrent;
 
     using XIVRADAR.Properties;
     using XIVRADAR.Windows;
@@ -17,38 +18,42 @@ namespace XIVRADAR {
     public class WindowManager {
         private static Lazy<WindowManager> _instance = new Lazy<WindowManager>(() => new WindowManager());
 
-        private RadarWindow _radarWindow;
+        private ConcurrentDictionary<int, RadarWindow> _radarWindows = new ConcurrentDictionary<int, RadarWindow>();
 
-        private TransparentRadarWindow _transparentRadarWindow;
+        private ConcurrentDictionary<int, TransparentRadarWindow> _transparentRadarWindows = new ConcurrentDictionary<int, TransparentRadarWindow>();
 
         public static WindowManager Instance => _instance.Value;
 
-        public void ShowRadarWindow() {
-            if (this._radarWindow is not null) {
+        public void ShowRadarWindow(int processID) {
+            if (this._radarWindows.TryGetValue(processID, out RadarWindow existing)) {
                 return;
             }
 
             Settings.Default.ShowRadarOnOpen = true;
 
-            this._radarWindow = new RadarWindow();
-            this._radarWindow.Show();
-            this._radarWindow.Closed += (_, _) => {
-                this._radarWindow = null;
+            RadarWindow radarWindow = new RadarWindow(processID);
+            radarWindow.Show();
+            radarWindow.Closed += (_, _) => {
+                this._radarWindows.TryRemove(processID, out RadarWindow removed);
             };
+
+            this._radarWindows.TryAdd(processID, radarWindow);
         }
 
-        public void ShowTransparentRadarWindow() {
-            if (this._transparentRadarWindow is not null) {
+        public void ShowTransparentRadarWindow(int processID) {
+            if (this._transparentRadarWindows.TryGetValue(processID, out TransparentRadarWindow existing)) {
                 return;
             }
 
             Settings.Default.ShowTransparentRadarOnOpen = true;
 
-            this._transparentRadarWindow = new TransparentRadarWindow();
-            this._transparentRadarWindow.Show();
-            this._transparentRadarWindow.Closed += (_, _) => {
-                this._transparentRadarWindow = null;
+            TransparentRadarWindow transparentRadarWindow = new TransparentRadarWindow(processID);
+            transparentRadarWindow.Show();
+            transparentRadarWindow.Closed += (_, _) => {
+                this._transparentRadarWindows.TryRemove(processID, out TransparentRadarWindow removed);
             };
+
+            this._transparentRadarWindows.TryAdd(processID, transparentRadarWindow);
         }
     }
 }

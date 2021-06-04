@@ -10,8 +10,8 @@
 
 namespace XIVRADAR.Properties {
     using System;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +23,15 @@ namespace XIVRADAR.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
-
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -45,7 +45,7 @@ namespace XIVRADAR.Properties {
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,7 +59,7 @@ namespace XIVRADAR.Properties {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Feel like you want to make a donation?  It would be gratefully received.  Click the button to donate via GitHub sponsors..
         /// </summary>
@@ -68,7 +68,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("AboutTabItem_DonationText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Say hello, make a feature request, or raise a bug through one of these channels:.
         /// </summary>
@@ -77,7 +77,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("AboutTabItem_GetInTouchExtendedText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Get In Touch.
         /// </summary>
@@ -86,7 +86,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("AboutTabItem_GetInTouchText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to This project is completely open source. If you like it and want to say thanks you could hit the GitHub Star button, tweet or post about it, or tell your mum about it!.
         /// </summary>
@@ -95,7 +95,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("AboutTabItem_OpenSourceExtendedText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Open Source.
         /// </summary>
@@ -104,7 +104,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("AboutTabItem_OpenSourceText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to XIVRADAR.
         /// </summary>
@@ -113,7 +113,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("ApplicationName", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Save Changes.
         /// </summary>
@@ -122,7 +122,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("ChatCodes_SaveChangesText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Filter Enabled.
         /// </summary>
@@ -131,7 +131,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("FilterItem_FilterEnabledText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to MinLevel.
         /// </summary>
@@ -140,7 +140,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("FilterItem_MinLevelText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to RegEx.
         /// </summary>
@@ -149,7 +149,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("FilterItem_RegularExpressionText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Type.
         /// </summary>
@@ -158,7 +158,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("FilterItem_TypeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Compass Mode.
         /// </summary>
@@ -167,7 +167,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("HomeTabItem_CompassModeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Create Filter.
         /// </summary>
@@ -176,7 +176,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("HomeTabItem_CreateFilterText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to DebugInfo.
         /// </summary>
@@ -185,7 +185,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("HomeTabItem_DebugInfoText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Delete Filter.
         /// </summary>
@@ -194,7 +194,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("HomeTabItem_DeleteFilterItemText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Edit Advanced Options.
         /// </summary>
@@ -203,7 +203,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("HomeTabItem_EditFilterItemText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Entity Filters.
         /// </summary>
@@ -212,7 +212,16 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("HomeTabItem_EntityFiltersText", resourceCulture);
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Changes.
+        /// </summary>
+        public static string HomeTabItem_SaveChangesText {
+            get {
+                return ResourceManager.GetString("HomeTabItem_SaveChangesText", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Show Radar.
         /// </summary>
@@ -221,7 +230,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("HomeTabItem_ShowRadarText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Show Transparent Radar.
         /// </summary>
@@ -230,7 +239,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("HomeTabItem_ShowTransparentRadarText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to XIVRADAR.
         /// </summary>
@@ -239,7 +248,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("HomeTabItem_WelcomeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
@@ -248,7 +257,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("MainWindow_AboutButtonText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ChatLog.
         /// </summary>
@@ -257,7 +266,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("MainWindow_ChatLogButtonText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Debug.
         /// </summary>
@@ -266,7 +275,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("MainWindow_DebugButtonText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
@@ -275,7 +284,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("MainWindow_HomeButtonText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
@@ -284,7 +293,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("MainWindow_SettingsButtonText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Accent.
         /// </summary>
@@ -293,7 +302,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("Palette_AccentText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Dark.
         /// </summary>
@@ -302,7 +311,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("Palette_DarkText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Light.
         /// </summary>
@@ -311,7 +320,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("Palette_LightText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Mid.
         /// </summary>
@@ -320,7 +329,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("Palette_MidText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Primary - Mid.
         /// </summary>
@@ -329,7 +338,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("Palette_PrimaryMidText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Accent.
         /// </summary>
@@ -338,7 +347,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("PaletteSelector_AccentText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Dark.
         /// </summary>
@@ -347,7 +356,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("PaletteSelector_DarkText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to This is your current palette..
         /// </summary>
@@ -356,7 +365,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("PaletteSelector_DescriptionText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Light.
         /// </summary>
@@ -365,7 +374,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("PaletteSelector_LightText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Primary.
         /// </summary>
@@ -374,7 +383,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("PaletteSelector_PrimaryText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Distance.
         /// </summary>
@@ -383,7 +392,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_DistanceText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Entity Settings.
         /// </summary>
@@ -392,7 +401,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_EntitySettingsText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Entity Type.
         /// </summary>
@@ -401,7 +410,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_EntityTypeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FontColor.
         /// </summary>
@@ -410,7 +419,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_FontColorText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FontSize.
         /// </summary>
@@ -419,7 +428,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_FontSizeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Gathering.
         /// </summary>
@@ -428,7 +437,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_GatheringText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to HPP.
         /// </summary>
@@ -437,7 +446,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_HPPText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Job.
         /// </summary>
@@ -446,7 +455,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_JobText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Monster A Rank.
         /// </summary>
@@ -455,7 +464,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_MonsterARankText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Monster B Rank.
         /// </summary>
@@ -464,7 +473,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_MonsterBRankText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Monster S Rank.
         /// </summary>
@@ -473,7 +482,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_MonsterSRankText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Monster.
         /// </summary>
@@ -482,7 +491,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_MonsterText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
@@ -491,7 +500,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_NameText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to NPC.
         /// </summary>
@@ -500,7 +509,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_NPCText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Other.
         /// </summary>
@@ -509,7 +518,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_OtherText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to PC.
         /// </summary>
@@ -518,7 +527,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_PCText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Show.
         /// </summary>
@@ -527,7 +536,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("RadarSettings_ShowText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Chat Codes.
         /// </summary>
@@ -536,7 +545,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("SettingsTabItem_ChatCodesTabHeaderText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Radar.
         /// </summary>
@@ -545,7 +554,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("SettingsTabItem_RadarText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Sharlayan.
         /// </summary>
@@ -554,7 +563,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("SettingsTabItem_SharlayanTabHeaderText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Theme.
         /// </summary>
@@ -563,7 +572,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("SettingsTabItem_ThemeTabHeaderText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Actions.
         /// </summary>
@@ -572,7 +581,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("UserSettings_ActionsHelperText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Actor.
         /// </summary>
@@ -581,7 +590,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("UserSettings_ActorHelperText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Adjust these timings to increase or decrease data latency. Faster timings may increase CPU usage..
         /// </summary>
@@ -590,7 +599,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("UserSettings_AdjustmentText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ChatLog.
         /// </summary>
@@ -599,7 +608,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("UserSettings_ChatLogHelperText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Current Player.
         /// </summary>
@@ -608,7 +617,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("UserSettings_CurrentPlayerHelperText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Data Settings.
         /// </summary>
@@ -617,7 +626,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("UserSettings_DataSettingsText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Inventory.
         /// </summary>
@@ -626,7 +635,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("UserSettings_InventoryHelperText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Job Resources.
         /// </summary>
@@ -635,7 +644,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("UserSettings_JobResourcesHelperText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Memory Timings.
         /// </summary>
@@ -644,7 +653,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("UserSettings_MemoryTimingsText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Party Members.
         /// </summary>
@@ -653,7 +662,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("UserSettings_PartyMembersHelperText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reset Settings.
         /// </summary>
@@ -662,7 +671,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("UserSettings_ResetSettingsText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Target.
         /// </summary>
@@ -671,7 +680,7 @@ namespace XIVRADAR.Properties {
                 return ResourceManager.GetString("UserSettings_TargetHelperText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Use locally cached JSON for Sharlayan resources.
         /// </summary>

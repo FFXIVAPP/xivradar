@@ -11,22 +11,18 @@
 namespace XIVRADAR {
     using System;
     using System.ComponentModel;
+    using System.Diagnostics;
     using System.Windows;
     using System.Windows.Threading;
 
     using XIVRADAR.Helpers;
     using XIVRADAR.Properties;
     using XIVRADAR.ViewModels;
-    using XIVRADAR.Windows;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
-        private static RadarWindow _radarWindow;
-
-        private static TransparentRadarWindow _transparentRadarWindow;
-
         public MainWindow() {
             this.InitializeComponent();
 
@@ -41,9 +37,6 @@ namespace XIVRADAR {
             if (Application.Current.MainWindow is not null) {
                 Application.Current.MainWindow.WindowState = WindowState.Normal;
             }
-
-            _radarWindow?.Close();
-            _transparentRadarWindow?.Close();
 
             Settings.Default.Save();
 
@@ -66,12 +59,14 @@ namespace XIVRADAR {
         private void MainWindow_OnLoaded(object sender, RoutedEventArgs e) {
             AppContext.Instance.Initialize();
 
-            if (Settings.Default.ShowRadarOnOpen) {
-                WindowManager.Instance.ShowRadarWindow();
-            }
+            foreach ((int processID, Process _) in AppViewModel.Instance.GameInstances) {
+                if (Settings.Default.ShowRadarOnOpen) {
+                    WindowManager.Instance.ShowRadarWindow(processID);
+                }
 
-            if (Settings.Default.ShowTransparentRadarOnOpen) {
-                WindowManager.Instance.ShowTransparentRadarWindow();
+                if (Settings.Default.ShowTransparentRadarOnOpen) {
+                    WindowManager.Instance.ShowTransparentRadarWindow(processID);
+                }
             }
         }
     }

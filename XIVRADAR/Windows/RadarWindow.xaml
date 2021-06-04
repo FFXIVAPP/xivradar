@@ -9,9 +9,10 @@
     xmlns:models="clr-namespace:XIVRADAR.Models"
     xmlns:properties="clr-namespace:XIVRADAR.Properties"
     xmlns:viewmodels="clr-namespace:XIVRADAR.ViewModels"
-    Title="RADAR"
-    Width="{Binding RadarWidth, Mode=TwoWay, Source={x:Static properties:Settings.Default}}"
-    Height="{Binding RadarHeight, Mode=TwoWay, Source={x:Static properties:Settings.Default}}"
+    x:Name="RadarHost"
+    Title="{Binding WindowTitle, ElementName=RadarHost}"
+    Width="600"
+    Height="600"
     d:DataContext="{d:DesignInstance viewmodels:MainWindowViewModel}"
     d:DesignHeight="600"
     d:DesignWidth="600"
@@ -21,14 +22,13 @@
     Closing="RadarWindow_OnClosing"
     FontFamily="{materialDesign:MaterialDesignFont}"
     Foreground="{DynamicResource MaterialDesignBody}"
-    Left="{Binding RadarLeft, Mode=TwoWay, Source={x:Static properties:Settings.Default}}"
     Loaded="RadarWindow_OnLoaded"
-    Top="{Binding RadarTop, Mode=TwoWay, Source={x:Static properties:Settings.Default}}"
-    Topmost="True"
-    WindowStartupLocation="Manual"
+    WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
 
-    <Grid DockPanel.Dock="Bottom">
+    <Grid
+        x:Name="RadarLayoutHost"
+        DockPanel.Dock="Bottom">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
